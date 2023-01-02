@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dating App Bio Generator</title>
+</head>
+<body>
+  <h1>Dating App Bio Generator</h1>
+  <p>Enter your information below to generate a hilarious dating app bio:</p>
+  <form id="myForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age"><br>
+    <label for="job">Job:</label><br>
+    <input type="text" id="job" name="job"><br>
+    <label for="hobbies">Hobbies:</label><br>
+    <input type="text" id="hobbies" name="hobbies"><br><br>
+    <input type="submit" value="Generate Bio">
+  </form> 
+
+  <script>
+    // Get the form element
+    var form = document.getElementById("myForm");
+
+    // Add a submit event listener to the form
+    form.addEventListener("submit", function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // Get the values of the form fields
+      var name = document.getElementById("name").value;
+      var age = document.getElementById("age").value;
+      var job = document.getElementById("job").value;
+      var hobbies = document.getElementById("hobbies").value;
+
+      // Generate the bio
+      var bio = "Hi, I'm " + name + " and I'm " + age + " years old. I work as a " + job + " and in my free time, I enjoy " + hobbies + ".";
+
+      // Display the bio
+      alert(bio);
+    });
+  </script>
+</body>
+</html>
